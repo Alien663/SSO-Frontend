@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core'
-import {FormControl, Validators} from '@angular/forms';
-import { EasyFormSetting } from "../../Component/EasyForm/easyform.component"
 import { APIService } from '../../Lib/api.service'
+import { PersonService } from './person.service'
 
 @Component({
-    selector: "app-personal-info",
-    templateUrl: "./personalInformation.layout.html",
-    styleUrls :["./personalInformation.layout.css"]
+    selector: "app-person",
+    templateUrl: "./person.html",
+    styleUrls :["./person.css"]
 })
 
-export class PersonalInformationLayout implements OnInit {
-    constructor (private myapi : APIService){}
+export class PersonLayout implements OnInit {
+    constructor (
+        private myapi : APIService,
+        protected _service : PersonService
+    ){}
     ngOnInit(){
         this.myapi.callAPI("Member/me", "GET", {}).subscribe((res:any) => {
-            this.personaldata = res
+            this._service.mydata = res
         })
     }
     

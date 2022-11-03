@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ResetPasswordLayout } from './ResetPassword.layout'
+import { ResetPasswordLayout } from './resetPassword.layout'
 import { MatDividerModule } from "@angular/material/divider"
 import { MatListModule } from "@angular/material/list"
 import { MatInputModule } from "@angular/material/input"

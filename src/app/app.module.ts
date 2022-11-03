@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthorizationModule } from "./Authorization/Authorization.module"
 import { PersonalInformationModule } from './Layout/PersonalInformation/personalInformation.module'
 import { RegeistModule } from './Layout/Regeist/regeist.module'
-import { ResetPasswordModule } from './Layout/ResetPassword/ResetPassword.module'
+import { ResetPasswordModule } from './Layout/ResetPassword/resetPassword.module'
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatSidenavModule } from '@angular/material/sidenav'

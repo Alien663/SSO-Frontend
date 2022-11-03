@@ -1,7 +1,4 @@
 import { Injectable, isDevMode } from '@angular/core';
-
-import { Observable, of } from 'rxjs';
-import { tap, delay } from 'rxjs/operators';
 import { APIService } from '../Lib/api.service';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
@@ -11,57 +8,32 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-    constructor(private http: HttpClient, private theAPI : APIService){}
-    isLoggedIn = false;
+    public isLoggedIn = false;
 
+    constructor(private http: HttpClient, private _http : APIService){}
     // store the URL so we can redirect after logging in
     redirectUrl: string | null = null;
 
     login(data: any){
-        const apiurl = isDevMode() ? "http://localhost:59089/api/Member/login" : "/api/Member/login";
-        let option = {
-            headers: {'Content-Type': 'application/json'},
-            observe: "response" as "response",
-            withCredentials: true,
-            responseType: 'json' as 'json'
-        }
-        this.http.post(apiurl, data, option)
+        this._http.callAPI("Member/login", "POST", data)
         .subscribe(res => {
             this.isLoggedIn = true
-            window.alert("login success")
+            window.alert("Login Success")
         })
     }
 
     autoLogin(){
-        const apiurl = isDevMode() ? "http://localhost:59089/api/Member/login" : "/api/Member/login";
-        let option = {
-            headers: {'Content-Type': 'application/json'},
-            observe: "response" as "response",
-            withCredentials: true,
-            responseType: 'json' as 'json'
-        }
-        this.http.get(apiurl).pipe(catchError(this.handleError))
+        this._http.callAPI("Member/login", "GET")
         .subscribe(res => {
             this.isLoggedIn = true
         })
     }
 
     logout(): void {
-        console.log("let me log outtttttt")
-        this.theAPI.callAPI("Member/logout", "POST")
+        this._http.callAPI("Member/logout", "POST")
         .subscribe( res => {
            this.isLoggedIn = false
            window.location.assign("/login");
         })
-    }
-
-    handleError(error: HttpErrorResponse){
-        if(error.status === 0){
-            console.error("Error occured : ", error.error)
-        }
-        else{
-            console.error(`Backend return code ${error.status}, body was`, error.error)
-        }
-        return throwError( () => new Error("Something bad happened; please try again later."))
     }
 }
