@@ -10,28 +10,13 @@ import { PersonService } from './person.service'
 
 export class PersonLayout implements OnInit {
     constructor (
-        private myapi : APIService,
+        private _http : APIService,
         protected _service : PersonService
     ){}
     ngOnInit(){
-        this.myapi.callAPI("Member/me", "GET", {}).subscribe((res:any) => {
+        this._http.callAPI("Member", "GET", {})
+        .subscribe((res:any) => {
             this._service.mydata = res
-        })
-    }
-    
-    personaldata = {
-        account: "",
-        uuid: "",
-        eMail: "",
-        nickName: "",
-        since: "",
-        modifyDatetime: ""
-    }
-
-    saveData(){
-        console.log(this.personaldata)
-        this.myapi.callAPI("Member/me", "POST", this.personaldata).subscribe(res => {
-            console.log(res)
         })
     }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { RegeistService } from './regeist.service'
 
 @Component({
     selector: "app-regeist",
@@ -6,4 +7,6 @@ import { Component } from '@angular/core'
     styleUrls :["./regeist.css"]
 })
 
-export class RegeistLayout {}
+export class RegeistLayout {
+    constructor(protected _service : RegeistService){}
+}

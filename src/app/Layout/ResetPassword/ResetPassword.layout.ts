@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { FormControl, Validators } from '@angular/forms'
+import { ResetPassworedService } from './resetPassword.service'
 
 @Component({
     selector: "app-reset-password",
@@ -6,4 +8,6 @@ import { Component } from '@angular/core'
     styleUrls :["./ResetPassword.css"]
 })
 
-export class ResetPasswordLayout {}
+export class ResetPasswordLayout {
+    constructor(protected _service : ResetPassworedService){}
+}

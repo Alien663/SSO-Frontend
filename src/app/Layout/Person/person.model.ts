@@ -4,5 +4,5 @@ export interface PersonModel{
     nickName : string,
     eMail : string,
     since: Date,
-    modifyDatetime : Date,
+    modifyDate : Date,
 }

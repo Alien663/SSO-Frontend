@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { PersonLayout } from './person.layout'
 import { PersonService } from './person.service'
 
+import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from "@angular/material/divider"
 import { MatListModule } from "@angular/material/list"
 import { MatInputModule } from "@angular/material/input"
@@ -13,6 +14,7 @@ import { MatFormFieldModule } from "@angular/material/form-field"
     declarations:[PersonLayout],
     imports:[
         CommonModule,
+        FormsModule,
         MatDividerModule,
         MatListModule,
         MatInputModule,

@@ -1,8 +1,5 @@
-import { Injectable, isDevMode } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { APIService } from '../Lib/api.service';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +7,7 @@ import { catchError } from 'rxjs/operators';
 export class AuthService {
     public isLoggedIn = false;
 
-    constructor(private http: HttpClient, private _http : APIService){}
+    constructor(private _http : APIService){}
     // store the URL so we can redirect after logging in
     redirectUrl: string | null = null;
 

@@ -1,2 +1,27 @@
-<h1>Single Sign On</h1>
-<router-outlet></router-outlet>
+<div style="text-align: center;">
+    <button style="width: 100%;" mat-button routerLink="/">
+        <h1>Single Sign On</h1>
+    </button>
+
+</div>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/login">
+        <span>here to login page</span>
+    </button>
+    <button mat-menu-item routerLink="/regeist">
+        <span>here to regeist page</span>
+    </button>
+    <button mat-menu-item routerLink="/member/information">
+        <span>here to personal information page</span>
+    </button>
+    <button mat-menu-item routerLink="/member/resetpassword">
+        <span>here to reset password page</span>
+    </button>
+</mat-menu>
+<div style="margin: 0 auto;width: 70%;">
+    <div>
+        {{authService.isLoggedIn}}
+    </div>
+    <router-outlet></router-outlet>
+</div>
