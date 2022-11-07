@@ -9,6 +9,8 @@ import { AuthorizationModule } from "./Authorization/Authorization.module"
 import { PersonModule } from './Layout/Person/person.module'
 import { RegeistModule } from './Layout/Regeist/regeist.module'
 import { ResetPasswordModule } from './Layout/ResetPassword/resetPassword.module'
+import { MemberSendVerifyModule } from './Layout/MemberVerify/memberSendVerify.module'
+import { ForgetPasswordModule } from './Layout/ForgetPassword/forgetPassword.module'
 
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
@@ -26,6 +28,8 @@ import { MatMenuModule } from '@angular/material/menu'
     PersonModule,
     RegeistModule,
     ResetPasswordModule,
+    MemberSendVerifyModule,
+    ForgetPasswordModule,
     MatButtonModule,
     MatMenuModule,
   ],

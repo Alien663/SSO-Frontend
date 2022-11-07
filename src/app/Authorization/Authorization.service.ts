@@ -20,7 +20,7 @@ export class AuthService {
     }
 
     autoLogin(){
-        this._http.callAPI("Member/login", "GET")
+        this._http.callAPI("Member/login", "GET", {})
         .subscribe(res => {
             this.isLoggedIn = true
         })

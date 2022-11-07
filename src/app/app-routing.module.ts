@@ -7,7 +7,10 @@ import { HomeComponent} from './Component/home/home.component'
 import { loginUserLayout } from './Authorization/Login/loginUser.layout'
 import { PersonLayout } from './Layout/Person/person.layout'
 import { RegeistLayout } from './Layout/Regeist/regeist.layout'
-import { ResetPasswordLayout } from './Layout/ResetPassword/resetPassword.layout'
+import { ResetPasswordLayout, ResetPasswordLayout2 } from './Layout/ResetPassword/resetPassword.layout'
+import { MemberVerifyLayout } from './Layout/MemberVerify/memberVerify.layout'
+import { MemberSendVerifyLayout } from './Layout/MemberVerify/memberSendVerify.layout'
+import { ForgetPasswordLayout } from './Layout/ForgetPassword/forgetPassword.layout'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -15,6 +18,10 @@ const routes: Routes = [
   { path: "regeist", component: RegeistLayout},
   { path: "member/information", component:PersonLayout},
   { path: "member/resetpassword", component:ResetPasswordLayout},
+  { path: "member/resetpassword/:token/:uuid", component:ResetPasswordLayout2},
+  { path: "member/verify/:token/:uuid", component : MemberVerifyLayout},
+  { path: "member/verify/send", component: MemberSendVerifyLayout},
+  { path: "member/forgetpassword", component: ForgetPasswordLayout},
   { path: "**", component: PageNotFoundComponent}
 ];
 

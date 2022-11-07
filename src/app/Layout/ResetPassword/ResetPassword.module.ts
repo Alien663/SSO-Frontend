@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ResetPasswordLayout } from './resetPassword.layout'
+import { ResetPasswordLayout, ResetPasswordLayout2 } from './resetPassword.layout'
 import { ResetPassworedService } from './resetPassword.service'
 
 import { MatDividerModule } from "@angular/material/divider"
@@ -11,7 +11,7 @@ import { MatFormFieldModule } from "@angular/material/form-field"
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations:[ResetPasswordLayout],
+    declarations:[ResetPasswordLayout, ResetPasswordLayout2],
     imports:[
         CommonModule,
         MatDividerModule,

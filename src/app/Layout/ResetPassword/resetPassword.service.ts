@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { APIService } from '../../Lib/api.service'
-import { PasswordModel } from './resetPassword.model'
+import { PasswordModel, Password2Model } from './resetPassword.model'
 import { AuthService } from '../../Authorization/Authorization.service'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 

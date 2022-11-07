@@ -70,12 +70,9 @@ export class APIService {
 
     GetParams(originData : any){
         let params = new HttpParams();
-        if(originData > 0){
-            originData.forEach( (item : any) => {
-                let keyname = Object.keys(item)[0]
-                params.set(keyname, item[keyname])
-            })
-        }
+        Object.keys(originData).forEach(item => {
+            params.set(item, originData[item])
+        })
         return params
     }
 }
