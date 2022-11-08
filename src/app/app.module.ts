@@ -14,6 +14,12 @@ import { ForgetPasswordModule } from './Layout/ForgetPassword/forgetPassword.mod
 
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatIconModule } from '@angular/material/icon'
+
+import { APIService } from './Lib/api.service'
+import { AuthGuard } from './Lib/AuthGuard'
+import { AuthService } from './Authorization/Authorization.service'
 
 @NgModule({
   declarations: [
@@ -32,8 +38,10 @@ import { MatMenuModule } from '@angular/material/menu'
     ForgetPasswordModule,
     MatButtonModule,
     MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
-  providers: [],
+  providers: [APIService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

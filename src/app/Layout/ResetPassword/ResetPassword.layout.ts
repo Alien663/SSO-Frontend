@@ -7,7 +7,7 @@ import { Password2Model } from './resetPassword.model'
 @Component({
     selector: "app-reset-password",
     templateUrl: "./ResetPassword.html",
-    styleUrls :["./ResetPassword.css"]
+    styleUrls :["./resetPassword.css"]
 })
 
 export class ResetPasswordLayout {

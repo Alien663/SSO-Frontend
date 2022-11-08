@@ -7,4 +7,9 @@
 .example-full-width {
   width: 100%;
 }
-      
+  
+
+button{
+  background-color: rgb(55, 55, 55);
+  color: white;
+}

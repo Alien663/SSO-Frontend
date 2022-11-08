@@ -1,3 +1,31 @@
 h1{
     text-align: center;
 }
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.title-icon img{
+    height: 25px;
+}
+
+.title-icon{
+    float: left;
+    padding-top: 3px;
+    margin-right: 5px;
+}
+
+.home-button{
+    margin-top: 9px;
+}
+
+.menu-icon{
+    margin-right: 10px;
+}
+
+.tool-bar{
+    background-color: rgb(55, 55, 55);
+    color: white;
+}

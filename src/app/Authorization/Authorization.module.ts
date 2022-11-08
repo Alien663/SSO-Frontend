@@ -23,6 +23,5 @@ import { APIService} from '../Lib/api.service'
   declarations: [
     loginUserLayout
   ],
-  providers: [APIService]
 })
 export class AuthorizationModule {}

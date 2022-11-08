@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { AuthService } from './Authorization/Authorization.service'
 
 @Component({
@@ -8,13 +8,16 @@ import { AuthService } from './Authorization/Authorization.service'
 })
 
 export class AppComponent {
-  constructor(public authService: AuthService){}
+  protected isdev = isDevMode()
+
+  constructor(public _auth: AuthService){}
 
   ngOnInit(){
-    this.authService.autoLogin()
+    if(!this._auth.isLoggedIn)
+      this._auth.autoLogin()
   }
 
   Logout(){
-    this.authService.logout()
+    this._auth.logout()
   }
 }
