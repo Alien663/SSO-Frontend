@@ -11,6 +11,7 @@ import { ResetPasswordLayout, ResetPasswordLayout2 } from './Layout/ResetPasswor
 import { MemberVerifyLayout } from './Layout/MemberVerify/memberVerify.layout'
 import { MemberSendVerifyLayout } from './Layout/MemberVerify/memberSendVerify.layout'
 import { ForgetPasswordLayout } from './Layout/ForgetPassword/forgetPassword.layout'
+import { EndpointLayout } from './Layout/Endpoint/endpoint.layout'
 import { AuthGuard } from './Lib/AuthGuard'
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: "member/verify/:token/:uuid", component : MemberVerifyLayout},
   { path: "member/verify/send", component: MemberSendVerifyLayout},
   { path: "member/forgetpassword", component: ForgetPasswordLayout},
+  { path: "endpoint/:apikey", component: EndpointLayout},
   { path: "**", component: PageNotFoundComponent}
 ];
 

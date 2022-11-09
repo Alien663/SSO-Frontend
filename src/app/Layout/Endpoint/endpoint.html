@@ -1,0 +1,15 @@
+<div *ngIf="showContent" class="container">
+    <form>
+        <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+          <mat-label>User ID</mat-label>
+          <input matInput placeholder="User ID" name="account" ngModel>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" name="password" ngModel>
+        </mat-form-field>
+        
+        <button type="submit" mat-flat-button style="width: 100%">Sign in</button>
+    </form>
+</div>

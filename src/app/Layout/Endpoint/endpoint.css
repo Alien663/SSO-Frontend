@@ -1,0 +1,12 @@
+.container{
+    width: 30%;
+    padding: 15px;
+    margin: 0 auto;
+    color: black;
+}
+
+
+button{
+    background-color: rgb(55, 55, 55);
+    color: white;
+}

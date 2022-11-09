@@ -11,6 +11,7 @@ import { RegeistModule } from './Layout/Regeist/regeist.module'
 import { ResetPasswordModule } from './Layout/ResetPassword/resetPassword.module'
 import { MemberSendVerifyModule } from './Layout/MemberVerify/memberSendVerify.module'
 import { ForgetPasswordModule } from './Layout/ForgetPassword/forgetPassword.module'
+import { EndpointModule } from './Layout/Endpoint/endpoint.module'
 
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
@@ -36,6 +37,7 @@ import { AuthService } from './Authorization/Authorization.service'
     ResetPasswordModule,
     MemberSendVerifyModule,
     ForgetPasswordModule,
+    EndpointModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
