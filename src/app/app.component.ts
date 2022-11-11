@@ -18,8 +18,8 @@ export class AppComponent {
   ){}
 
   ngOnInit(){
-    if(!this._auth.isLoggedIn)
-      this._auth.autoLogin()
+    // if(!this._auth.isLoggedIn)
+    //   this._auth.autoLogin()
   }
 
   Logout(){

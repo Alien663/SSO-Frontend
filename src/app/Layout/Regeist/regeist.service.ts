@@ -18,8 +18,9 @@ export class RegeistService{
         const validation = this.validatePassword()
         if(validation.result)
             this._http.callAPI("member/new", "PUT", this.applicationData).subscribe((res:any) => {
-                window.alert("Regeist Successful, please login again")
-                window.location.assign("/login")
+                window.alert("Regeist Successful, please verify yourself(but I don't have smtp server, so it will leed you to the verify page)")
+                window.location.assign("/member/verify/send") 
+                // window.location.assign("/login")
             })
         else
             window.alert(validation.message)
