@@ -12,7 +12,7 @@ export class loginUserLayout{
 
   ngOnInit(){
     if(this.authService.isLoggedIn){
-      window.location.assign("/");
+      // window.location.assign("/");
     }
   }
 

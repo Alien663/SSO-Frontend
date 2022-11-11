@@ -12,6 +12,7 @@ import { ResetPasswordModule } from './Layout/ResetPassword/resetPassword.module
 import { MemberSendVerifyModule } from './Layout/MemberVerify/memberSendVerify.module'
 import { ForgetPasswordModule } from './Layout/ForgetPassword/forgetPassword.module'
 import { EndpointModule } from './Layout/Endpoint/endpoint.module'
+import { AlertDialogModuel } from './Component/alertDialog/alertDialog.module'
 
 import { MatButtonModule } from '@angular/material/button'
 import { MatMenuModule } from '@angular/material/menu'
@@ -38,6 +39,7 @@ import { AuthService } from './Authorization/Authorization.service'
     MemberSendVerifyModule,
     ForgetPasswordModule,
     EndpointModule,
+    AlertDialogModuel,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
