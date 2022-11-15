@@ -1,13 +1,13 @@
 <div *ngIf="showContent" class="container">
-    <form>
+    <form (ngSubmit)="_service.LoginbyEndpoint()">
         <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
           <mat-label>User ID</mat-label>
-          <input matInput placeholder="User ID" name="account" ngModel>
+          <input matInput placeholder="User ID" name="account" [(ngModel)]="_service.account">
         </mat-form-field>
       
         <mat-form-field class="example-full-width" appearance="fill" style="width: 100%">
           <mat-label>Password</mat-label>
-          <input matInput placeholder="Password" type="password" name="password" ngModel>
+          <input matInput placeholder="Password" type="password" name="password" [(ngModel)]="_service.password">
         </mat-form-field>
         
         <button type="submit" mat-flat-button style="width: 100%">Sign in</button>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { APIService } from 'src/app/Lib/api.service';
+import { EndpointService } from './endpoint.service'
 
 @Component({
   templateUrl: './endpoint.html',
@@ -11,14 +12,16 @@ export class EndpointLayout{
   protected showContent = false
   constructor(
     private _router : ActivatedRoute,
-    private _http : APIService
+    private _http : APIService,
+    public _service : EndpointService
   ){
     this.apikey = this._router.snapshot.paramMap.get("apikey")
   }
 
   ngOnInit(){
-    this._http.callAPI("client/verify", "POST",{ APIKEY: this.apikey})
+    this._http.callAPI("Endpoint", "POST", { APIKEY: this.apikey})
     .subscribe(res => {
+      console.log(res)
       this.showContent = true
     })
   }
